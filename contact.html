@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banga-an's Creatives</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 100%;
+            min-height: 100%;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            background-color: #dce9e4;
+            color: #020202;
+        }
+        /* HEADER */
+        header {
+            background-color: #0b96e7;
+            color: white;
+            flex-shrink: 0;
+        }
+        .top-header {
+            height: 105px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+            border-bottom: 1px solid #71827e;
+        }
+        .logo {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            border: 3px solid #b7d8c9;
+            object-fit: cover;
+        }
+        .brand {
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        /* NAVIGATION */
+        nav {
+            height: 65px;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+        }
+        nav a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            padding: 0 45px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+        nav a:hover,
+        nav a.active {
+            background-color: #3e514c;
+        }
+        /* MAIN CONTENT */
+        main {
+            flex: 1;
+            display: flex;
+            padding: 3vh 7%;
+        }
+        .contact-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2vh 40px;
+            background-color: #eef5f1;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+        }
+        /* HEADING */
+        .contact-heading {
+            text-align: center;
+            margin-bottom: 3vh;
+        }
+        .contact-heading h1 {
+            font-size: clamp(20px, 3.4vh, 34px);
+            margin-bottom: 1vh;
+        }
+        .contact-heading p {
+            font-size: clamp(12px, 1.9vh, 14px);
+            color: #46514c;
+        }
+        /* CONTACT DETAILS AND FORM */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 40px;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .contact-details {
+            padding-top: 1.5vh;
+        }
+        .contact-details h2 {
+            font-size: clamp(14px, 2.4vh, 20px);
+            color: #657c4e;
+            margin-bottom: 3vh;
+        }
+        .detail {
+            margin-bottom: 2.5vh;
+        }
+        .detail h3 {
+            font-size: clamp(11px, 1.7vh, 13px);
+            margin-bottom: 0.7vh;
+        }
+        .detail p {
+            font-size: clamp(12px, 1.9vh, 13px);
+            line-height: 1.5;
+        }
+        /* FORM */
+        .contact-form label {
+            display: block;
+            font-size: clamp(11px, 1.6vh, 12px);
+            font-weight: bold;
+            margin: 1vh 0 0.7vh;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd6d0;
+            border-radius: 4px;
+            background-color: #f8fbf9;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+        }
+        .contact-form input {
+            height: clamp(30px, 5vh, 40px);
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .contact-form textarea {
+            height: clamp(48px, 9vh, 75px);
+            resize: none;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: 2px solid #71827e;
+        }
+        .contact-form button {
+            display: block;
+            width: 100%;
+            height: clamp(30px, 5vh, 40px);
+            margin-top: 1.8vh;
+            border: none;
+            border-radius: 3px;
+            background-color: #0b96e7;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #3e514c;
+        }
+        /* FOOTER FIXED AT PAGE BOTTOM */
+        footer {
+            flex-shrink: 0;
+            width: 100%;
+            background-color: #283936;
+            color: white;
+            text-align: center;
+            padding: 22px;
+            font-size: 14px;
+        }
+        /* SMALL SCREENS */
+        @media (max-width: 700px) {
+            .brand {
+                font-size: 20px;
+            }
+            nav a {
+                padding: 0 12px;
+                font-size: 13px;
+            }
+            .contact-container {
+                padding: 25px 20px;
+            }
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .contact-details {
+                padding-top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-header">
+            <img src="logo.png" class="logo" alt="Logo">
+            <div class="brand">BANGA-AN'S CREATIVES</div>
+        </div>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="contact.html" class="active">CONTACT</a>
+        </nav>
+    </header>
+    <main>
+        <section class="contact-container">
+            <div class="contact-heading">
+                <h1>Get In Touch</h1>
+                <p>Have a question or a project in mind? Reach out to us below.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-details">
+                    <h2>CONTACT DETAILS</h2>
+                    <div class="detail">
+                        <h3>FACEBOOK</h3>
+                        <p>JUN BANGA-AN</p>
+                    </div>
+                    <div class="detail">
+                        <h3>INSTAGRAM</h3>
+                        <p>@supp.jun</p>
+                    </div>
+                    <div class="detail">
+                        <h3>PHONE NUMBER</h3>
+                        <p>09487541625</p>
+                    </div>
+                </div>
+                <form class="contact-form"
+                      action="mailto:YOUR-EMAIL@example.com"
+                      method="post"
+                      enctype="text/plain">
+                    <label for="fullname">FULL NAME</label>
+                    <input type="text" id="fullname" name="Full Name"
+                           placeholder="Your Name" required>
+                    <label for="email">EMAIL ADDRESS</label>
+                    <input type="email" id="email" name="Email"
+                           placeholder="email@example.com" required>
+                    <label for="message">COMMENTS / MESSAGE</label>
+                    <textarea id="message" name="Message"
+                              placeholder="Write your message here..."
+                              required></textarea>
+                    <button type="submit">SEND MESSAGE</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2026 Banga-an's Creatives
+    </footer>
+</body>
+</html>
